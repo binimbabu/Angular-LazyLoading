@@ -23,8 +23,8 @@ const routes: Routes = [
     loadChildren: () => import('./dashboard/dashboard.module').then(module => module.DashboardModule)
   },
   { path: '**', 
-    component: NotfoundComponent
-    //loadChildren: () => import('./notfound/notfound.module').then(module => module.NotfoundModule) 
+    //component: NotfoundComponent
+    loadChildren: () => import('./notfound/notfound.module').then(module => module.NotfoundModule) 
     }
 ];
 
