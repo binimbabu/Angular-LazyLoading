@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'lazyloading';
+  userId = 1;
+  constructor(private router: Router) {
+
+  }
+  login() {
+    let sampleUserID = 1;
+    if(this.userId === sampleUserID) {
+      this.router.navigate(['login',123]);
+    } else {
+      alert('User does not exist');
+    }
+  }
 }
